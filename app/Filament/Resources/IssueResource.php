@@ -28,9 +28,8 @@ class IssueResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('issue_date')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\DatePicker::make('issue_date')
+                    ->required(),
                 Forms\Components\TextInput::make('issue_code')
                     ->required()
                     ->maxLength(255),
