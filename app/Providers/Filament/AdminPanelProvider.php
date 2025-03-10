@@ -30,6 +30,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Filament Demo')
             ->colors([
                 'primary' => Color::Amber,
             ])
