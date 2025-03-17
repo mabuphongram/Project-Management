@@ -22,6 +22,8 @@ new #[Layout('layouts.guest')] class extends Component
 
         $redirectUrl = auth()->user()->role_id == 1 ? url('/admin') : url('/user');
 
+        // $redirectUrl = auth()->user()->role_id == 1 ? url('/admin') : (auth()->user()->role_id == 2 ? url('/user') : (auth()->user()->role_id == 3 ? url('/client') : url('/pending')));
+
         $this->redirectIntended(default: $redirectUrl, navigate: true);
     }
 }; ?>
